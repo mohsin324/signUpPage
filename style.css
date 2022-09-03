@@ -1,0 +1,32 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+h2{
+    color: lightgreen;
+    text-align: center;
+}
+.cnic, .password, .email{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.cnic > label, .password > label, .email > label{
+    padding: 5px;
+}
+.cnic > input, .password > input, .email > input{
+    padding: 10px;
+    border-radius: 5px;
+}
+.btn > button{
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+}
