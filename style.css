@@ -30,3 +30,8 @@ h2{
     padding: 10px;
     width: 100%;
 }
+.small{
+    color: red;
+    font-weight: bold;
+    display: none;
+}
