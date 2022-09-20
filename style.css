@@ -1,37 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 body{
+    background-color: lightgray;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
 }
-h2{
-    color: lightgreen;
-    text-align: center;
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-height: 100vh;
+    margin-top: 20px;
+    box-shadow: 0 0 20px gray;
+    width: 500px;
+    border-radius: 1px;
 }
-.cnic, .password, .email{
+
+.firstName, .lastName, .email, .password, .confirmPassword{
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
+    margin-top: 10px;
 }
-.cnic > label, .password > label, .email > label{
-    padding: 5px;
+.firstName > label, .lastName > label, .email > label, .password > label, .confirmPassword > label{
+    font-size: 20px;
+    margin-bottom: 2px;
 }
-.cnic > input, .password > input, .email > input{
-    padding: 10px;
-    border-radius: 5px;
+.firstName > input, .lastName > input, .email > input, .password > input, .confirmPassword > input{
+    width: 400px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 0px;
+    outline: none;
+    margin: 0px;
 }
-.btn > button{
+.firstName > small, .lastName > small, .email > small, .password > small, .confirmPassword > small  {
+    font-size: 15px;
+    visibility: hidden;
+}
+input:focus{
+    border: 2px solid gray;
+}
+.btnSubmit{
+    width: 432px;
     background-color: blue;
+    padding: 15px;
+    border: 0px;
     color: white;
-    border-radius: 5px;
-    padding: 10px;
-    width: 100%;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
 }
-.small{
+.firstName.error > small, .lastName.error > small, .email.error > small, .password.error > small, .confirmPassword.error > small  {
+    font-size: 15px;
+    visibility: visible;
     color: red;
-    font-weight: bold;
-    display: none;
+}
+.firstName.error > input, .lastName.error > input, .email.error > input, .password.error > input, .confirmPassword.error > input  {
+    border: 2px solid red;
+}
+.firstName.success > input, .lastName.success> input, .email.success > input, .password.success > input, .confirmPassword.success > input  {
+    font-size: 15px;
+    visibility: visible;
+    border: 2px solid green;
 }
